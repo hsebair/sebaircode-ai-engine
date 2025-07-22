@@ -4,11 +4,11 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from flask import Flask, send_from_directory
-from src.models.user import db
-from src.routes.user import user_bp
-from src.routes.ai_engine import ai_engine_bp
-from src.routes.database_manager import database_manager_bp
-from src.routes.deployment_manager import deployment_manager_bp
+from models.user import db
+from routes.user import user_bp
+from routes.ai_engine import ai_engine_bp
+from routes.database_manager import database_manager_bp
+from routes.deployment_manager import deployment_manager_bp
 from flask_cors import CORS
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
